@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#0d0f0d">
+<title>NEW방 ONLINE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="view" aria-label="게임 화면"></canvas>
+
+<div id="hud" hidden>
+  <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div id="topL"><span class="rec">● REC</span> <span id="tc">00:00:00:00</span> <span id="mode" class="chip"></span></div>
+  <div id="topC"><span id="obj"></span><span id="ruleTag"></span></div>
+  <div id="topR"><span id="expo"></span><span class="battwrap"><span id="batt" data-v="4"><i></i><i></i><i></i><i></i></span><b id="hpText"></b></span></div>
+  <div id="party"></div>
+  <canvas id="mini" width="150" height="120"></canvas>
+  <div id="af"><i></i><i></i><i></i><i></i><b></b></div>
+  <div id="hitm">✕</div>
+  <div id="tags"></div>
+  <div id="bossbar" hidden><span>방문자</span><i><u></u></i></div>
+  <div id="banner" class="pop"></div>
+  <div id="rulebox" class="pop"></div>
+  <div id="lvlup" class="pop"></div>
+  <div id="subline" class="pop"></div>
+  <div id="toast" class="pop"></div>
+  <div id="choice" hidden></div>
+  <div id="chat"></div>
+  <div id="bottomR">
+    <div id="skillBox"><i id="skillCd"></i><b>Q</b><span id="skillName"></span></div>
+    <div id="weap"><span id="wname"></span><b id="ammo"></b></div>
+  </div>
+  <div id="xp"><i id="xpFill"></i><span id="lvl">LV 1</span></div>
+  <div id="dead" hidden>신호 끊김 · 재접속 중…</div>
+</div>
+
+<div id="touch" hidden>
+  <div id="stick"><i></i></div>
+  <button data-k="fire" class="t-fire">사격</button>
+  <button data-k="aim" class="t-aim">줌</button>
+  <button data-k="jump" class="t-jump">점프</button>
+  <button data-k="skill" class="t-skill">Q</button>
+  <button data-k="view" class="t-view">시점</button>
+</div>
+
+<div id="menu">
+  <div class="menu-in">
+    <div class="rec-line"><span class="rec">● REC</span> NEW방 ONLINE · 접속자 6 / 6</div>
+    <h1>NEW방 <span>ONLINE</span></h1>
+    <p class="tagline">아직 아무도 나가지 않았다. 이번엔 카메라 대신 총을 들고.</p>
+    <p class="pickhint">캐릭터를 눌러 바로 접속</p>
+    <div id="chars"></div>
+    <div class="howto">
+      <span><kbd>WASD</kbd> 이동</span><span><kbd>마우스</kbd> 조준</span><span><kbd>클릭</kbd> 사격</span><span><kbd>우클릭</kbd> 줌</span>
+      <span><kbd>Space</kbd> 점프</span><span><kbd>Shift</kbd> 달리기</span><span><kbd>Q</kbd> 스킬</span><span><kbd>V</kbd> 1인칭/3인칭</span><span><kbd>R</kbd> 장전</span><span><kbd>1·2·3</kbd> 선택</span>
+    </div>
+    <p class="goal">방의 잡음을 쓸어내고 <b>봉인 12개</b>를 모으면 출구가 열린다. 30–50초마다 <b>건물의 규칙</b>이 바뀐다.</p>
+    <div class="menu-foot"><span id="record"></span><button id="soundBtn">소리 켜짐</button></div>
+  </div>
+</div>
+
+<div id="pause" hidden><div>일시정지<small>화면을 클릭하면 계속</small></div></div>
+<div id="ending" hidden></div>
+
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/visitor-img.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/world.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/input.js"></script>
+<script src="js/hud.js"></script>
+<script src="js/actors.js"></script>
+<script src="js/rules.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
